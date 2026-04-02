@@ -36,7 +36,14 @@ The program is built using a  Class-based structure to separate logic from rende
 
 ---
 
+Progress day 1:
 
-1. Clone the repo.
-2. Open in your preferred IDE.
-3. Run the main executable/index file.
+Created classes for all aformentioned classes.
+Created settings.py for simplicity
+
+Next Steps:
+
+Add base logic so game works, work on defining placements of obstacles.
+
+---
+
