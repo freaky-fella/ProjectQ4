@@ -1,0 +1,30 @@
+self.level_data = [
+            # --- CUBE SECTION (Starts at X=600 to give player a moment) ---
+            (0, 'p', 1, "CUBE"), 
+            (600, 't', 0), (660, 't', 0), (720, 't', 0),        # Triple spike (60px spacing)
+            (1200, 'b', 0), (1260, 'b', 0), (1260, 't', 1),    # Spike sitting on a block
+            (1800, 'b', 1.5), (1860, 'b', 1.5), (1800, 't', 0), # High platform jump over floor spike
+            (2400, 't', 0), (2460, 't', 0), (2520, 't', 0),    # Triple spike
+            (3200, 'b', 1), (3400, 'b', 2), (3600, 'b', 3),    # Staircase (Spaced out for 60px jump arc)
+            (4200, 't', 0), (4260, 't', 0),
+            (5000, 'p', 3, 'WAVE'),                            # Portal (Level 3 = 180px high)
+
+            # --- WAVE SECTION ---
+            # Tight corridor: level 1 (60px) and level 6 (360px)
+            (5600, 'b', 1), (5600, 'b', 6), 
+            (5800, 'b', 1), (5800, 'b', 6),
+            (6200, 't', 1), (6500, 't', 5),                    # Vertical slalom
+            (6800, 't', 1), (7100, 't', 5),
+            (7800, 'b', 3), (7860, 'b', 3), (7920, 'b', 3),    # Floating 60px thick island
+            (8500, 'b', 0), (8500, 'b', 7), (8500, 't', 1),    # Extremely narrow gap
+            (9500, 'b', 2), (9800, 'b', 5), (10100, 'b', 2),   # High-speed zig-zag
+            (11500, 'p', 3, 'CUBE'),                           # Transition back
+
+            # --- FINAL CUBE SPRINT ---
+            (12500, 't', 0), (12560, 't', 0), (12620, 't', 0), # Final Triple
+            (13500, 'b', 1), (13560, 't', 2), (13620, 'b', 1), # Spike "sandwich"
+            (14500, 'b', 2), (14620, 'b', 2), 
+            (15500, 't', 0), (15560, 't', 0), (15620, 't', 0), 
+            (16500, 'b', 1), (16700, 'b', 3), (16900, 'b', 1), # Precision "Platform Hop"
+            (18000, 't', 0), (18060, 't', 0), (18120, 't', 0), # The "Game Over" Triple spike
+        ]
