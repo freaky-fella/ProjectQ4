@@ -1,19 +1,26 @@
 import pygame
-import random
-from settings import GROUND_Y, SCREEN_WIDTH, RED
+from settings import RED, GROUND_Y
 
 class Obstacle:
-    def __init__(self, x):
-        self.rect = pygame.Rect(x, GROUND_Y - 30, 30, 30)
+
+    def __init__(self, x, y=None):
+        size = 60 
+        if y is None: y = GROUND_Y - size
+        
+        self.draw_rect = pygame.Rect(x, y, size, size)
+        self.rect = pygame.Rect(x + 15, y + 20, size - 30, size - 25)
         self.speed = 7
 
     def update(self):
+        self.draw_rect.x -= self.speed
         self.rect.x -= self.speed
 
     def draw(self, screen):
         points = [
-            (self.rect.left, self.rect.bottom),
-            (self.rect.right, self.rect.bottom),
-            (self.rect.centerx, self.rect.top)
+            (self.draw_rect.left, self.draw_rect.bottom),
+            (self.draw_rect.right, self.draw_rect.bottom),
+            (self.draw_rect.centerx, self.draw_rect.top)
         ]
         pygame.draw.polygon(screen, RED, points)
+        
+    
