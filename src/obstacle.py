@@ -1,5 +1,5 @@
 import pygame
-from settings import RED, GROUND_Y
+from settings import RED, GROUND_Y, SPEED
 
 class Obstacle:
 
@@ -9,7 +9,7 @@ class Obstacle:
         
         self.draw_rect = pygame.Rect(x, y, size, size)
         self.rect = pygame.Rect(x + 15, y + 20, size - 30, size - 25)
-        self.speed = 7
+        self.speed = SPEED
 
     def update(self):
         self.draw_rect.x -= self.speed

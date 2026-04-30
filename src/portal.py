@@ -3,7 +3,7 @@ from settings import SPEED
 
 class Portal:
     def __init__(self, x, y, target_mode):
-        self.rect = pygame.Rect(x, y, 100, 150) # Slightly larger for better visibility
+        self.rect = pygame.Rect(x, y, 100, 150) 
         self.target_mode = target_mode
         self.activated = False
 
@@ -12,7 +12,6 @@ class Portal:
         else:
             self.image = pygame.image.load("cubeportal.png").convert_alpha()
         
-        # Scale the image to fit our 50x100 hitbox
         self.image = pygame.transform.scale(self.image, (100, 150))
 
 
